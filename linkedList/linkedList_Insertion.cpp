@@ -32,16 +32,16 @@ int getLength(Node *head)
     return count;
 }
 
-void insertAtTheBegining(Node *head)
+void insertAtTheBegining(Node **head)
 {
     Node *newNode = new Node();
     cout << "Enter the data you want to insert at the begining: ";
     cin >> newNode->data;
-    newNode->next = head;
-    head = newNode;
+    newNode->next = *head;
+    *head = newNode;
 
     cout << "After the insertion in the list" << endl;
-    printList(head);
+    printList(*head);
 }
 
 void insertAtTheEnd(Node *head)
@@ -112,7 +112,9 @@ int main()
     third->next = NULL;
     cout<<"List elements"<<endl;
     printList(head);
-    insertAtTheBegining(head);
+    insertAtTheBegining(&head);
+    cout<<"After insertion in main "<<endl;
+    printList(head);
     insertAtTheEnd(head);
     insetAfterGivenNode(head);
     return 0;
