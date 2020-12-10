@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "*.html": "html",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
     }
 }
